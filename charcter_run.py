@@ -27,17 +27,20 @@ def run_circle():
         x=cx+r*math.cos(math.radians(deg))
         y=cy+r*math.sin(math.radians(deg))
         render_all(x,y)
+
 def run_rectangle():
     print("rectangle")
 #bottom line
-    for x in range(50,750,10):
-        render_all(x,90)
-    for x in range(750,50,-10):
-        render_all(x,90)
+#    for x in range(50,750,10):
+#        render_all(x,90)
+#idle 창을 왔다갔다 하면서 의도한대로 움직이는지 확인해보자
+#문제 체크하는 시간을 많이 줄일수 있따.
+    for x in range(750,50-1,-10):
+        render_all(x,550)
     pass
 
 while True:
-    run_circle()
+#    run_circle()
     run_rectangle()
     break
 
